@@ -1,0 +1,25 @@
+{
+    "bootcamp": {
+        "title": "karvand python",
+        "year": 2026
+    },
+    "karvands": [
+        {
+            "id": "1",
+            "fullname": "1",
+            "email": "1",
+            "city": "1",
+            "education": {
+                "degree": "1",
+                "field": "1"
+            },
+            "skills": [
+                {
+                    "name": "1",
+                    "level": "1",
+                    "score": 1
+                }
+            ]
+        }
+    ]
+}

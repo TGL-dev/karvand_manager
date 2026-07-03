@@ -62,24 +62,25 @@ def show_def():
     try:
         with open("G:\AI_Course\week2\HW\karvand_manager\data\data.json.json", "r", encoding="utf-8") as file:
             data = json.load(file)
-            if data is None:
-                print("empty list!\n")
-            else:
-                for karvand in data["karvands"]:
+        print(data)
+        if data is None:
+            print("empty list!\n")
+        else:
+            for karvand in data["karvands"]:
+                print(f"""
+                name : {karvand["fullname"]}
+                email: {karvand["email"]}
+                city : {karvand["city"]}
+                education field : {karvand["education"]["field"]}
+                education degree : {karvand["education"]["degree"]}
+                skills :
+                """)
+                for skill in karvand["skills"]:
                     print(f"""
-                    name : {karvand["fullname"]}
-                    email: {karvand["email"]}
-                    city : {karvand["city"]}
-                    education field : {karvand["education"]["field"]}
-                    education degree : {karvand["education"]["degree"]}
-                    skills :
+                        skill name : {skill['name']}
+                        skill level : {skill['level']}
+                        skill score : {skill['score']}
                     """)
-                    for skill in karvand["skills"]:
-                        print(f"""
-                            skill name : {skill['name']}
-                            skill level : {skill['level']}
-                            skill score : {skill['score']}
-                        """)
     except FileNotFoundError:
         print("file not found!\n")
     except json.JSONDecodeError:

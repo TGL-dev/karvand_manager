@@ -10,6 +10,7 @@ data = {
     "karvands": []
 }
 
+
 def add_def():
     person = {}
     try:
@@ -88,6 +89,7 @@ def show_def():
 
 def search_def():
     try:
+        
         with open("G:\AI_Course\week2\HW\karvand_manager\data\data.json", "r", encoding="utf-8") as file:
             data = json.load(file)
         if data is None:
